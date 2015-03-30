@@ -6,8 +6,8 @@ class CreateClinicas < ActiveRecord::Migration
       t.string :complemento
       t.string :municipio
       t.string :cep
-      t.double :latitude
-      t.double :longitude
+      t.float :latitude
+      t.float :longitude
       t.string :telefone1
       t.string :telefone2
       t.string :email

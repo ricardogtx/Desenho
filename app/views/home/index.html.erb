@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="w"> Bem vindo! </h1>
+
+<div class="container">
+    <p class="w"> Este software tem como finalidade apresentar localidade das clínicas terapêuticas no Brasil.  </p>
+        <div class="img-responsive aspect home_background" ></div>
+    <td>
+    <%=link_to raw("<i class=\"fa fa-plus-square\"> Informações das Clínicas </i>"),
+                           clinicas_path,
+                           :target => "_self",
+                           class: "btn btn-success  btn-small"%>
+    </td>
+</div>

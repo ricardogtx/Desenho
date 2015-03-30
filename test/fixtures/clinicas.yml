@@ -6,8 +6,8 @@ one:
   complemento: MyString
   municipio: MyString
   cep: MyString
-  latitude: 
-  longitude: 
+  latitude: 1.5
+  longitude: 1.5
   telefone1: MyString
   telefone2: MyString
   email: MyString
@@ -22,8 +22,8 @@ two:
   complemento: MyString
   municipio: MyString
   cep: MyString
-  latitude: 
-  longitude: 
+  latitude: 1.5
+  longitude: 1.5
   telefone1: MyString
   telefone2: MyString
   email: MyString
