@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Clinicas</h1>
+<h1 class="w">Clínicas</h1>
 
-<table>
+<div class="img-responsive aspect data_background" ></div>
+<table class="table table-striped w">
   <thead>
     <tr>
       <th>Nome</th>
@@ -50,4 +51,5 @@
 
 <br>
 
-<%= link_to 'New Clinica', new_clinica_path %>
+<%= link_to 'Voltar', root_path,
+class: "btn btn-warning  btn-small" %>
