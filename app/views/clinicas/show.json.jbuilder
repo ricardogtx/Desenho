@@ -1,0 +1,1 @@
+json.extract! @clinica, :id, :nome, :endereco, :complemento, :municipio, :cep, :latitude, :longitude, :telefone1, :telefone2, :email, :publico, :publico_especifico, :sexo_publico, :modalidade, :created_at, :updated_at

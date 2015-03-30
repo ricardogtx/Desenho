@@ -1,0 +1,73 @@
+<%= form_for(@clinica) do |f| %>
+  <% if @clinica.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@clinica.errors.count, "error") %> prohibited this clinica from being saved:</h2>
+
+      <ul>
+      <% @clinica.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :endereco %><br>
+    <%= f.text_field :endereco %>
+  </div>
+  <div class="field">
+    <%= f.label :complemento %><br>
+    <%= f.text_field :complemento %>
+  </div>
+  <div class="field">
+    <%= f.label :municipio %><br>
+    <%= f.text_field :municipio %>
+  </div>
+  <div class="field">
+    <%= f.label :cep %><br>
+    <%= f.text_field :cep %>
+  </div>
+  <div class="field">
+    <%= f.label :latitude %><br>
+    <%= f.text_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br>
+    <%= f.text_field :longitude %>
+  </div>
+  <div class="field">
+    <%= f.label :telefone1 %><br>
+    <%= f.text_field :telefone1 %>
+  </div>
+  <div class="field">
+    <%= f.label :telefone2 %><br>
+    <%= f.text_field :telefone2 %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :publico %><br>
+    <%= f.text_field :publico %>
+  </div>
+  <div class="field">
+    <%= f.label :publico_especifico %><br>
+    <%= f.text_field :publico_especifico %>
+  </div>
+  <div class="field">
+    <%= f.label :sexo_publico %><br>
+    <%= f.text_field :sexo_publico %>
+  </div>
+  <div class="field">
+    <%= f.label :modalidade %><br>
+    <%= f.text_field :modalidade %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
