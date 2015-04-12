@@ -10,7 +10,7 @@ class CreateClinicas < ActiveRecord::Migration
       t.float :longitude
       t.string :telefone1
       t.string :telefone2
-      t.string :email
+      t.string :mail
       t.string :publico
       t.string :publico_especifico
       t.string :sexo_publico
