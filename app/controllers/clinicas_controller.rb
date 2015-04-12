@@ -61,6 +61,11 @@ class ClinicasController < ApplicationController
     end
   end
 
+  def import
+    Clinica.import(params[:file])
+    redirect_to clinicas_url, notice:  "Clinicas importadas com sucesso"
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_clinica
@@ -71,4 +76,5 @@ class ClinicasController < ApplicationController
     def clinica_params
       params.require(:clinica).permit(:nome, :endereco, :complemento, :municipio, :cep, :latitude, :longitude, :telefone1, :telefone2, :email, :publico, :publico_especifico, :sexo_publico, :modalidade)
     end
-end
+   end
+

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :clinicas
+  resources :clinicas do
+  collection {post :import}
+  end
   resources :home
 
   root 'home#index'
