@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1 class="w">Clínicas</h1>
+<h1 class="">Clínicas</h1>
 
-<div class="img-responsive aspect data_background" ></div>
-<table class="table table-striped w">
+
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Nome</th>
@@ -41,9 +41,9 @@
         <td><%= clinica.publico_especifico %></td>
         <td><%= clinica.sexo_publico %></td>
         <td><%= clinica.modalidade %></td>
-        <td><%= link_to 'Show', clinica %></td>
-        <td><%= link_to 'Edit', edit_clinica_path(clinica) %></td>
-        <td><%= link_to 'Destroy', clinica, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', clinica,class: "btn btn-success  btn-small" %></td>
+        <td><%= link_to 'Editar', edit_clinica_path(clinica),class: "btn btn-warning  btn-small" %></td>
+        <td><%= link_to 'Excluir', clinica,class: "btn btn-danger  btn-small", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -51,5 +51,4 @@
 
 <br>
 
-<%= link_to 'Voltar', root_path,
-class: "btn btn-warning  btn-small" %>
+<%= link_to 'Voltar', root_path,class: "btn btn-warning  btn-small" %>
