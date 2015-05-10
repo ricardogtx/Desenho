@@ -1,42 +1,57 @@
+<head>
+    <title> Sistemas Comunidades Terapêuticas </title>
+    <meta charset = "utf-8" />
+</head>
+
 <body>
-<div class="img-responsive aspect home_background" >
-<div class = "container" >
 
-        <div class = "row" >
-
-            <h1 class="w"> Bem vindo ao Sistema de Comunidades Terapêuticas! </h1>
-
-            <p class = "w" style="text-align: center"> Este software tem como finalidade apresentar localidade das clínicas terapêuticas no Brasil.
-            <br>Os dados são disponibilizados de acordo com a Lei de Acesso a Informação Pública (Lei 12.527/2011).
-            </p>
-
+<div class = "jumbotron">
+    <div class = "container">
+        <div align = "center">
+            <%= image_tag "logo.jpg" %>
         </div>
+    </div>
+</div>
 
+<div class = "services">
+    <a name = "services"></a>
+        <div class = "container">
+            <div class = "wrap">
 
-        <div class = "row">
+                <h1 align = "center"> <strong> Serviços </strong></h1>
 
-            <div class = "container">
-                    <div class="col-sm-4">
-                            <a href="/drugs">
-                                <img id="image_home" class="img-circle img-responsive img-center dorgas-image" src="<%=image_path "drug_info.jpg"%>">
-                            </a>
-                                <h2 style = "text-align: center" class = "w">Informações</h2> <br><br>
-                                <p style = "text-align: center" class = "w">Informações sobre os efeitos e informações gerais dos principais tipos de drogas.</p>
+                    <div class = "col-md-6">
+                        <div align = "center">
+                            <a href = "/drugs"> <img src = "<%= image_path "drugs.jpg"%>"></a>
+                            <h2> Informação sobre as drogas </h2>
+                        </div>
                     </div>
 
+                    <div  class = "col-md-6">
+                        <div align = "center">
+                            <a href = "/clinicas"> <img src = "<%= image_path "rehab.jpg"%>"></a>
+                            <h2> Informação sobre as comunidades terapêuticas</h2>
+                        </div>
+                    </div>
 
-                <div class="col-sm-4">
-                    <a href="/clinicas">
-                        <img id="image_home" class="img-circle img-responsive img-center dorgas-image" src="<%=image_path "clinics.jpg"%>">
-                    </a>
-                        <h2 style = "text-align: center" class = "w">Comunidades terapêuticas</h2>
-                        <p style = "text-align: center" class = "w">Oferecem acolhimento para pessoas com transtornos decorrentes do uso, abuso
-                            ou dependência de drogas.</p>
-                </div>
             </div>
-    </div>
+        </div>
+</div>
 
+<div class = "about">
+    <a name = "about"> </a>
+        <div class = "container">
+
+            <h1 align = "center"> <strong> Sobre </strong> </h1>
+
+            <div class = "col-md-4 col-md-offset-4">
+                <p>Este software tem como finalidade apresentar a localidade das clínicas terapêuticas no Brasil.
+                <br><br>
+                Os dados utilizados são disponibilizados de acordo com a Lei de Acesso a Informação Pública (Lei 12.527/2011).
+                </p>
+            </div>
+        </div>
 </div>
-</div>
+
 </body>
 
