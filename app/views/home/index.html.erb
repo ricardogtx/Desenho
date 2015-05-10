@@ -1,19 +1,42 @@
+<body>
 <div class="img-responsive aspect home_background" >
-<p id="notice"><%= notice %></p>
+<div class = "container" >
 
-<h1 class="w"> Bem vindo ao Sistema de Comunidades Terapêuticas! </h1>
+        <div class = "row" >
+
+            <h1 class="w"> Bem vindo ao Sistema de Comunidades Terapêuticas! </h1>
+
+            <p class = "w" style="text-align: center"> Este software tem como finalidade apresentar localidade das clínicas terapêuticas no Brasil.
+            <br>Os dados são disponibilizados de acordo com a Lei de Acesso a Informação Pública (Lei 12.527/2011).
+            </p>
+
+        </div>
 
 
-    <p class="w"> Este software tem como finalidade apresentar localidade das clínicas terapêuticas no Brasil.
-    <br>Os dados são disponibilizados de acordo com a Lei de Acesso a Informação Pública (Lei 12.527/2011).
+        <div class = "row">
 
-    </p>
-        
-    <td>
-    <%=link_to raw("<i class=\"fa fa-plus-square\"> Informações das Clínicas </i>"),
-                           clinicas_path,
-                           :target => "_self",
-                           class: "btn btn-success  btn-small"%>
-    </td>
+            <div class = "container">
+                    <div class="col-sm-4">
+                            <a href="/drugs">
+                                <img id="image_home" class="img-circle img-responsive img-center dorgas-image" src="<%=image_path "drug_info.jpg"%>">
+                            </a>
+                                <h2 style = "text-align: center" class = "w">Informações</h2> <br><br>
+                                <p style = "text-align: center" class = "w">Informações sobre os efeitos e informações gerais dos principais tipos de drogas.</p>
+                    </div>
+
+
+                <div class="col-sm-4">
+                    <a href="/clinicas">
+                        <img id="image_home" class="img-circle img-responsive img-center dorgas-image" src="<%=image_path "clinics.jpg"%>">
+                    </a>
+                        <h2 style = "text-align: center" class = "w">Comunidades terapêuticas</h2>
+                        <p style = "text-align: center" class = "w">Oferecem acolhimento para pessoas com transtornos decorrentes do uso, abuso
+                            ou dependência de drogas.</p>
+                </div>
+            </div>
+    </div>
 
 </div>
+</div>
+</body>
+
