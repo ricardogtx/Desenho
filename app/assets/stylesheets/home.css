@@ -27,7 +27,6 @@ html, body {
 }
 
 .services{
-    height:600px;
     background-color: black;
     border-bottom: solid black 1px;
     background-image: url("clinics.jpg") ;
