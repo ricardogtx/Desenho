@@ -15,7 +15,7 @@ class ParsersController < ApplicationController
 
   def import
     Parser.import(params[:file])
-    redirect_to parsers_url, notice:  "Clinicas importadas com sucesso"
+    redirect_to root_url, notice:  "Clinicas importadas com sucesso"
   end
 
 
