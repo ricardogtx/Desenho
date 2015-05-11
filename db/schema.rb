@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150330000411) do
+ActiveRecord::Schema.define(version: 20150511011531) do
 
   create_table "clinicas", force: :cascade do |t|
     t.string   "nome"
@@ -30,6 +30,24 @@ ActiveRecord::Schema.define(version: 20150330000411) do
     t.string   "modalidade"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+  end
+
+  create_table "drugs", force: :cascade do |t|
+    t.string   "name"
+    t.string   "drug_type"
+    t.string   "origin"
+    t.string   "average_ingest"
+    t.string   "ingestion_form"
+    t.string   "effect_average"
+    t.string   "duration"
+    t.string   "effect_high"
+    t.string   "dependence_psychological"
+    t.string   "dependence_phisical"
+    t.string   "tolerance"
+    t.string   "long_effects"
+    t.string   "medical_use"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
 end
