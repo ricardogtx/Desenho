@@ -1,8 +1,21 @@
 class ParsersController < ApplicationController
 
-def import
-    Clinica.import(params[:file])
-    redirect_to clinicas_url, notice:  "Clinicas importadas com sucesso"
+  def index
+	  @parsers = Parser.all
+  end
+
+  def new
+	  @parsers = Parser.new
+  end
+
+  def set_parser
+	  @parsers = Parser.find(params[:id])
+  end
+
+
+  def import
+    Parser.import(params[:file])
+    redirect_to parsers_url, notice:  "Clinicas importadas com sucesso"
   end
 
 
