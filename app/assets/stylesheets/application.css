@@ -15,7 +15,7 @@
  */
 
 .home_background {
-    background: url('general_background.jpg') no-repeat center center fixed;
+    background: url('bg.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -44,4 +44,70 @@
     top:0;
     left:0;
     z-index: -1;
+}
+.services{
+  color: ;
+  background: white;
+  height: 800px;
+ 
+}
+
+
+.services h1{
+  margin-top:100px;
+  color: black;
+}
+
+.services h2{
+  text-align: center;
+  color:black;
+}
+
+.services img{
+  border-radius:100%;
+  opacity:0.70;
+  transition: 0.25s;
+
+}
+
+.services img:hover{
+  border-radius:5%;
+  opacity:1;
+  
+}
+.jumbotron {
+  margin-bottom: 0px;
+  color: white;
+  text-shadow: black 0.3em 0.3em 0.3em;
+  background:transparent;
+  height: 400px;
+}
+.bgwhite{
+    background-color: white;
+}
+.bgblack{
+    background-color: black;
+}
+.lead{
+    text-align: center;
+    color: white;
+}
+.about{
+  position: relative;
+  height: 100%;
+  background:white;
+
+}
+
+.about h1{
+  margin-top:110px;
+  margin-bottom:70px;
+  color:black;
+  text-align: center;
+}
+
+.about p{
+  font-size: 20px;
+  color:black;
+  text-align: center;
 }
