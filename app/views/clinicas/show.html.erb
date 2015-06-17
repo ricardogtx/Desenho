@@ -69,6 +69,9 @@
   <strong>Modalidade:</strong>
   <%= @clinica.modalidade %>
 </p>
-
+<% if current_user%>
+<% if current_user.has_role? :admin%>
 <%= link_to 'Edit', edit_clinica_path(@clinica) %> |
+<% end %>
+<% end %>
 <%= link_to 'Back', clinicas_path %>

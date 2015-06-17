@@ -27,9 +27,14 @@
         <td><%= clinica.cep %></td>
         <td><%= clinica.telefone1 %></td>
         <td><%= link_to 'Mostrar', clinica,class: "btn btn-success  btn-small" %></td>
+        <% if current_user%>
+        <% if current_user.has_role? :admin%>
+
         <td><%= link_to 'Editar', edit_clinica_path(clinica),class: "btn btn-warning  btn-small" %></td>
         <td><%= link_to 'Excluir', clinica,class: "btn btn-danger  btn-small", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+        <% end%>
+        <% end%>
     <% end %>
   </tbody>
 </table>

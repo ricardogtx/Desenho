@@ -25,4 +25,11 @@ dataDrug = YAML::load_file(File.join(Rails.root,"public/static/drugs.yml"))
     drug.medical_use = data["Utilizacao_medica"]
     drug.save!
 
+
+    Role.find_or_create_by({name: 'admin'})
+
+
+    User.create( :email => 'admin@gmail.com', :password => '12345678', :password_confirmation => '12345678')
+
+
     end
