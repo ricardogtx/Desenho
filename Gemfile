@@ -35,7 +35,7 @@ gem 'json', '~> 1.8.2'
 
 gem 'therubyracer'
 
-gem 'less-rails'
+gem 'less-rails-bootstrap'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -60,3 +60,4 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring','~> 1.3.6'
 end
+gem "font-awesome-rails"
