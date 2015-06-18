@@ -15,7 +15,7 @@
   function main(){
     draw_drug_chart("drugs_usage[]", "", "chart_div");
     draw_drug_chart("drugs_death[]", "", "chart_div2");
-    raw_drug_chart("drugs_dependency[]", "", "chart_div3");
+    draw_drug_chart("drugs_dependency[]", "", "chart_div3");
   }
 
 

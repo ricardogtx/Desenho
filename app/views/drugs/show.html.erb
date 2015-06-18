@@ -1,4 +1,4 @@
-<center><h3> Quadro resumo: <%= @drug.name %> </h3></center><br>
+<center><h3> Detalhes: <%= @drug.name %> </h3></center><br>
 <div class="container">
 <table class="table table-bordered">
  <thead>
@@ -58,6 +58,6 @@
   </tr>
 </tbody>
 </table>
-<% button_to "voltar",home_path,form_class:"btn btn-warning" %>
+<%= link_to 'Voltar', drugs_path,class: "btn btn-warning  btn-small" %>
 <h6>Fonte: Anti Drogas (http://www.antidrogas.com.br/resumo.php)</h6>
 </div>
