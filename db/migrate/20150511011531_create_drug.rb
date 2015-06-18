@@ -14,6 +14,9 @@ class CreateDrug < ActiveRecord::Migration
     t.string   :tolerance
     t.string   :long_effects
     t.string   :medical_use
+    t.float    :usage_percentage
+    t.float    :death_rate
+    t.float    :dependency_rate
     t.timestamps null: false
     end
   end
