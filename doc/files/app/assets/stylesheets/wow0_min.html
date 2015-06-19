@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>wow0.min</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            wow0.min
+        </h1>
+        <ul class="files">
+            <li>app/assets/stylesheets/wow0.min</li>
+            <li>Last modified: 2015-06-17 18:08:13 -0300</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>! WOW - v1.1.2 - 2015-04-07 Copyright © 2015 Matthieu Aussaguel; Licensed
+MIT   (function(){var a,b,c,d,e,f=function(a,b){return function(){return
+a.apply(b,arguments)}},g=[].indexOf||function(a){for(var
+b=0,c=this.length;c&gt;b;b++)if(b in <a href="b">this&&this</a>===a)return
+b;return-1};b=function(){function a(){}return
+a.prototype.extend=function(a,b){var c,d;for(c in <a href="c">b)d=b</a>,<a
+href="c">null==a</a>&amp;&amp;(<a href="c">a</a>=d);return
+a},a.prototype.isMobile=function(a){return/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera
+Mini/i.test(a)},a.prototype.createEvent=function(a,b,c,d){var e;return
+null==b&amp;&amp;(b=!1),null==c&amp;&amp;(c=!1),null==d&amp;&amp;(d=null),null!=document.createEvent?(e=document.createEvent(“CustomEvent”),e.initCustomEvent(a,b,c,d)):null!=document.createEventObject?(e=document.createEventObject(),e.eventType=a):e.eventName=a,e},a.prototype.emitEvent=function(a,b){return
+null!=a.dispatchEvent?a.dispatchEvent(b):b <a
+href="b">in(null!=a)?a</a>():“on”+b <a
+href=""on"+b">in(null!=a)?a</a>():void
+0},a.prototype.addEvent=function(a,b,c){return <a
+href="b">null!=a.addEventListener?a.addEventListener(b,c,!1):null!=a.attachEvent?a.attachEvent(“on”+b,c):a</a>=c},a.prototype.removeEvent=function(a,b,c){return
+null!=a.removeEventListener?a.removeEventListener(b,c,!1):null!=a.detachEvent?a.detachEvent(“on”+b,c):delete
+<a href="b">a</a>},a.prototype.innerHeight=function(){return“innerHeight”in
+window?window.innerHeight:document.documentElement.clientHeight},a}(),c=this.WeakMap||this.MozWeakMap||(c=function(){function
+a(){<a href="">this.keys=[],this.values=</a>}return
+a.prototype.get=function(a){var <a
+href="b">b,c,d,e,f;for(f=this.keys,b=d=0,e=f.length;e>d;b=++d)if(c=f</a>,c===a)return
+<a href="b">this.values</a>},a.prototype.set=function(a,b){var <a
+href="c">c,d,e,f,g;for(g=this.keys,c=e=0,f=g.length;f>e;c=++e)if(d=g</a>,d===a)return
+<a href="c">void(this.values</a>=b);return
+this.keys.push(a),this.values.push(b)},a}()),a=this.MutationObserver||this.WebkitMutationObserver||this.MozMutationObserver||(a=function(){function
+a(){“undefined”!=typeof
+console&amp;&amp;null!==console&amp;&amp;console.warn(“MutationObserver is
+not supported by your browser.”),“undefined”!=typeof
+console&amp;&amp;null!==console&amp;&amp;console.warn(“WOW.js cannot detect
+dom mutations, please call .sync() after loading new content.”)}return
+a.notSupported=!0,a.prototype.observe=function(){},a}()),d=this.getComputedStyle||function(a){return
+this.getPropertyValue=function(b){var
+c;return“float”===b&amp;&amp;(b=“styleFloat”),e.test(b)&amp;&amp;b.replace(e,function(a,b){return
+b.toUpperCase()}),(<a href="b">null!=(c=a.currentStyle)?c</a>:void
+0)||null},this},<a
+href="a-z">e=/(-(</a>){1})/g,this.WOW=function(){function
+e(a){null==a&amp;&amp;(a={}),this.scrollCallback=f(this.scrollCallback,this),this.scrollHandler=f(this.scrollHandler,this),this.resetAnimation=f(this.resetAnimation,this),this.start=f(this.start,this),this.scrolled=!0,this.config=this.util().extend(a,this.defaults),this.animationNameCache=new
+c,this.wowEvent=this.util().createEvent(this.config.boxClass)}return
+e.prototype.defaults={boxClass:“wow”,animateClass:“animated”,offset:0,mobile:!0,live:!0,callback:null},e.prototype.init=function(){var
+a;return
+this.element=window.document.documentElement,“interactive”===(a=document.readyState)||“complete”===a?this.start():this.util().addEvent(document,“DOMContentLoaded”,this.start),this.finished=[]},e.prototype.start=function(){var
+b,c,d,e;if(this.stopped=!1,this.boxes=function(){var <a
+href="a">a,c,d,e;for(d=this.element.querySelectorAll(“.”+this.config.boxClass),e=[],a=0,c=d.length;c>a;a++)b=d</a>,e.push(b);return
+e}.call(this),this.all=function(){var <a
+href="a">a,c,d,e;for(d=this.boxes,e=[],a=0,c=d.length;c>a;a++)b=d</a>,e.push(b);return
+e}.call(this),this.boxes.length)if(this.disabled())this.resetStyle();else
+<a
+href="c">for(e=this.boxes,c=0,d=e.length;d>c;c++)b=e</a>,this.applyStyle(b,!0);return
+this.disabled()||(this.util().addEvent(window,“scroll”,this.scrollHandler),this.util().addEvent(window,“resize”,this.scrollHandler),this.interval=setInterval(this.scrollCallback,50)),this.config.live?new
+a(function(a){return function(b){var <a
+href="c">c,d,e,f,g;for(g=[],c=0,d=b.length;d>c;c++)f=b</a>,g.push(function(){var
+<a href="">a,b,c,d;for(c=f.addedNodes||[],d=</a>,<a
+href="a">a=0,b=c.length;b>a;a++)e=c</a>,d.push(this.doSync(e));return
+d}.call(a));return
+g}}(this)).observe(document.body,{childList:!0,subtree:!0}):void
+0},e.prototype.stop=function(){return
+this.stopped=!0,this.util().removeEvent(window,“scroll”,this.scrollHandler),this.util().removeEvent(window,“resize”,this.scrollHandler),null!=this.interval?clearInterval(this.interval):void
+0},e.prototype.sync=function(){return
+a.notSupported?this.doSync(this.element):void
+0},e.prototype.doSync=function(a){var
+b,c,d,e,f;if(null==a&amp;&amp;(a=this.element),1===a.nodeType){<a
+href="c">for(a=a.parentNode||a,e=a.querySelectorAll(“.”+this.config.boxClass),f=[],c=0,d=e.length;d>c;c++)b=e</a>,g.call(this.all,b)&lt;0?(this.boxes.push(b),this.all.push(b),this.stopped||this.disabled()?this.resetStyle():this.applyStyle(b,!0),f.push(this.scrolled=!0)):f.push(void
+0);return f}},e.prototype.show=function(a){return
+this.applyStyle(a),a.className=a.className+“
+”+this.config.animateClass,null!=this.config.callback&amp;&amp;this.config.callback(a),this.util().emitEvent(a,this.wowEvent),this.util().addEvent(a,“animationend”,this.resetAnimation),this.util().addEvent(a,“oanimationend”,this.resetAnimation),this.util().addEvent(a,“webkitAnimationEnd”,this.resetAnimation),this.util().addEvent(a,“MSAnimationEnd”,this.resetAnimation),a},e.prototype.applyStyle=function(a,b){var
+c,d,e;return
+d=a.getAttribute(“data-wow-duration”),c=a.getAttribute(“data-wow-delay”),e=a.getAttribute(“data-wow-iteration”),this.animate(function(f){return
+function(){return
+f.customStyle(a,b,d,c,e)}}(this))},e.prototype.animate=function(){return“requestAnimationFrame”in
+window?function(a){return
+window.requestAnimationFrame(a)}:function(a){return
+a()}}(),e.prototype.resetStyle=function(){var <a
+href="b">a,b,c,d,e;for(d=this.boxes,e=[],b=0,c=d.length;c>b;b++)a=d</a>,e.push(a.style.visibility=“visible”);return
+e},e.prototype.resetAnimation=function(a){var b;return
+a.type.toLowerCase().indexOf(“animationend”)&gt;=0?(b=a.target||a.srcElement,b.className=b.className.replace(this.config.animateClass,“”).trim()):void
+0},e.prototype.customStyle=function(a,b,c,d,e){return
+b&amp;&amp;this.cacheAnimationName(a),a.style.visibility=b?“hidden”:“visible”,c&amp;&amp;this.vendorSet(a.style,{animationDuration:c}),d&amp;&amp;this.vendorSet(a.style,{animationDelay:d}),e&amp;&amp;this.vendorSet(a.style,{animationIterationCount:e}),this.vendorSet(a.style,{animationName:b?“none”:this.cachedAnimationName(a)}),a},<a
+href=""moz","webkit"">e.prototype.vendors=</a>,e.prototype.vendorSet=function(a,b){var
+c,d,e,f;d=[];for(c in <a href="c">b)e=b</a>,<a
+href="""+c">a</a>=e,d.push(function(){var <a
+href="b">b,d,g,h;for(g=this.vendors,h=[],b=0,d=g.length;d>b;b++)f=g</a>,<a
+href="""+f+c.charAt(0).toUpperCase()+c.substr(1)">h.push(a</a>=e);return
+h}.call(this));return d},e.prototype.vendorCSS=function(a,b){var <a
+href="c">c,e,f,g,h,i;for(h=d(a),g=h.getPropertyCSSValue(b),f=this.vendors,c=0,e=f.length;e>c;c++)i=f</a>,g=g||h.getPropertyCSSValue(“-”<code>i</code>“-”+b);return
+g},e.prototype.animationName=function(a){var
+b;try{b=this.vendorCSS(a,“animation-name”).cssText}catch©{b=d(a).getPropertyValue(“animation-name”)}return“none”===b?“”:b},e.prototype.cacheAnimationName=function(a){return
+this.animationNameCache.set(a,this.animationName(a))},e.prototype.cachedAnimationName=function(a){return
+this.animationNameCache.get(a)},e.prototype.scrollHandler=function(){return
+this.scrolled=!0},e.prototype.scrollCallback=function(){var
+a;return!this.scrolled||(this.scrolled=!1,this.boxes=function(){var <a
+href="b">b,c,d,e;for(d=this.boxes,e=[],b=0,c=d.length;c>b;b++)a=d</a>,a&amp;&amp;(this.isVisible(a)?this.show(a):e.push(a));return
+e}.call(this),this.boxes.length||this.config.live)?void
+0:this.stop()},e.prototype.offsetTop=function(a){for(var b;void
+0===a.offsetTop;)a=a.parentNode;for(b=a.offsetTop;a=a.offsetParent;)b+=a.offsetTop;return
+b},e.prototype.isVisible=function(a){var b,c,d,e,f;return
+c=a.getAttribute(“data-wow-offset”)||this.config.offset,f=window.pageYOffset,e=f+Math.min(this.element.clientHeight,this.util().innerHeight())-c,d=this.offsetTop(a),b=d+a.clientHeight,e&gt;=d&amp;&amp;b&gt;=f},e.prototype.util=function(){return
+null!=this._util?this._util:this._util=new
+b},e.prototype.disabled=function(){return!this.config.mobile&amp;&amp;this.util().isMobile(navigator.userAgent)},e}()}).call(this);</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+              </div>
+
+    </div>
+  </body>
+</html>

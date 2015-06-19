@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>mixins.less</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            mixins.less
+        </h1>
+        <ul class="files">
+            <li>app/assets/stylesheets/less/mixins.less</li>
+            <li>Last modified: 2015-04-22 00:23:33 -0300</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>// Mixins</p>
+
+<p>.transition-all() {</p>
+
+<pre><code>-webkit-transition: all 0.35s;
+-moz-transition: all 0.35s;
+transition: all 0.35s;</code></pre>
+
+<p>}</p>
+
+<p>.background-cover() {</p>
+
+<pre><code>-webkit-background-size: cover;
+-moz-background-size: cover;
+background-size: cover;
+-o-background-size: cover;</code></pre>
+
+<p>}</p>
+
+<p>.button-variant(@color; @background; @border) {</p>
+
+<pre><code>color: @color;
+background-color: @background;
+border-color: @border;
+.transition-all;
+
+&amp;:hover,
+&amp;:focus,
+&amp;.focus,
+&amp;:active,
+&amp;.active,
+.open &gt; .dropdown-toggle&amp; {
+        color: @color;
+        background-color: darken(@background, 5%);
+    border-color: darken(@border, 7%);
+}
+&amp;:active,
+&amp;.active,
+.open &gt; .dropdown-toggle&amp; {
+        background-image: none;
+}
+&amp;.disabled,
+&amp;[disabled],
+fieldset[disabled] &amp; {
+        &amp;,
+        &amp;:hover,
+        &amp;:focus,
+        &amp;.focus,
+        &amp;:active,
+        &amp;.active {
+                background-color: @background;
+                border-color: @border;
+        }
+}
+
+.badge {
+        color: @background;
+        background-color: @color;
+}</code></pre>
+
+<p>}</p>
+
+<p>.sans-serif-font() {</p>
+
+<pre><code>font-family: &#39;Open Sans&#39;, &#39;Helvetica Neue&#39;, Arial, sans-serif;</code></pre>
+
+<p>}</p>
+
+<p>.serif-font() {</p>
+
+<pre><code>font-family: &#39;Merriweather&#39;, &#39;Helvetica Neue&#39;, Arial, sans-serif;</code></pre>
+
+<p>}</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+              </div>
+
+    </div>
+  </body>
+</html>
