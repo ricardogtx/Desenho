@@ -34,6 +34,7 @@
 
                   <li><a href="<%=drugs_path%>#portfolio" class="colorwhite">Drogas</a></li>
                   <li><a href="<%=clinicas_path%>#portfolio" class="colorwhite">Clínicas</a></li>
+                  <li><a href="<%=campanhas_path%>#portfolio" class="colorwhite">Campanhas</a></li>
                   <% if user_signed_in? %>
                   <% if current_user.has_role? :admin%>
                   <li class="clorwhite ">Logado com <%= current_user.email %></li>
