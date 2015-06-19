@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>cbpAnimatedHeader0.js</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            cbpAnimatedHeader0.js
+        </h1>
+        <ul class="files">
+            <li>app/assets/stylesheets/cbpAnimatedHeader0.js</li>
+            <li>Last modified: 2015-06-17 18:08:13 -0300</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<pre><code>cbpAnimatedHeader.js v1.0.0
+http://www.codrops.com
+
+Licensed under the MIT license.
+http://www.opensource.org/licenses/mit-license.php
+
+Copyright 2013, Codrops
+http://www.codrops.com</code></pre>
+
+<p>var cbpAnimatedHeader = (function() {</p>
+
+<pre><code>var docElem = document.documentElement,
+        header = document.querySelector( &#39;.navbar-default&#39; ),
+        didScroll = false,
+        changeHeaderOn = 300;
+
+function init() {
+        window.addEventListener( &#39;scroll&#39;, function( event ) {
+                if( !didScroll ) {
+                        didScroll = true;
+                        setTimeout( scrollPage, 250 );
+                }
+        }, false );
+}
+
+function scrollPage() {
+        var sy = scrollY();
+        if ( sy &gt;= changeHeaderOn ) {
+                classie.add( header, &#39;navbar-shrink&#39; );
+        }
+        else {
+                classie.remove( header, &#39;navbar-shrink&#39; );
+        }
+        didScroll = false;
+}
+
+function scrollY() {
+        return window.pageYOffset || docElem.scrollTop;
+}
+
+init();</code></pre>
+
+<p>})();</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+              </div>
+
+    </div>
+  </body>
+</html>

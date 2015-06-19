@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>classie.js</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            classie.js
+        </h1>
+        <ul class="files">
+            <li>app/assets/stylesheets/js/classie.js</li>
+            <li>Last modified: 2015-04-22 00:23:33 -0300</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<pre><code>!
+ classie - class helper functions
+ from bonzo https://github.com/ded/bonzo
+
+ classie.has( elem, &#39;my-class&#39; ) -&gt; true/false
+ classie.add( elem, &#39;my-new-class&#39; )
+ classie.remove( elem, &#39;my-unwanted-class&#39; )
+ classie.toggle( elem, &#39;my-class&#39; )
+
+jshint browser: true, strict: true, undef: true</code></pre>
+
+<p>/*global define: false */</p>
+
+<p>( function( window ) {</p>
+
+<p>&#39;use strict&#39;;</p>
+
+<p>// class helper functions from bonzo <a
+href="https://github.com/ded/bonzo">github.com/ded/bonzo</a></p>
+
+<p>function classReg( className ) {</p>
+
+<pre><code>return new RegExp(&quot;(^|\\s+)&quot; + className + &quot;(\\s+|$)&quot;);
+</code></pre>
+
+<p>}</p>
+
+<p>// classList support for class management // altho to be fair, the api
+sucks because it won&#39;t accept multiple classes at once var hasClass,
+addClass, removeClass;</p>
+
+<p>if ( &#39;classList&#39; in document.documentElement ) {</p>
+
+<pre><code>hasClass = function( elem, c ) {
+  return elem.classList.contains( c );
+};
+addClass = function( elem, c ) {
+  elem.classList.add( c );
+};
+removeClass = function( elem, c ) {
+  elem.classList.remove( c );
+};
+</code></pre>
+
+<p>} else {</p>
+
+<pre><code>hasClass = function( elem, c ) {
+  return classReg( c ).test( elem.className );
+};
+addClass = function( elem, c ) {
+  if ( !hasClass( elem, c ) ) {
+    elem.className = elem.className + &#39; &#39; + c;
+  }
+};
+removeClass = function( elem, c ) {
+  elem.className = elem.className.replace( classReg( c ), &#39; &#39; );
+};</code></pre>
+
+<p>}</p>
+
+<p>function toggleClass( elem, c ) {</p>
+
+<pre><code>var fn = hasClass( elem, c ) ? removeClass : addClass;
+fn( elem, c );
+</code></pre>
+
+<p>}</p>
+
+<p>var classie = {</p>
+
+<pre><code>// full names
+hasClass: hasClass,
+addClass: addClass,
+removeClass: removeClass,
+toggleClass: toggleClass,
+// short names
+has: hasClass,
+add: addClass,
+remove: removeClass,
+toggle: toggleClass</code></pre>
+
+<p>};</p>
+
+<p>// transport if ( typeof define === &#39;function&#39; &amp;&amp;
+define.amd ) {</p>
+
+<pre><code>// AMD
+define( classie );</code></pre>
+
+<p>} else {</p>
+
+<pre><code>// browser global
+window.classie = classie;</code></pre>
+
+<p>}</p>
+
+<p>})( window );</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+              </div>
+
+    </div>
+  </body>
+</html>
