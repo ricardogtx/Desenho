@@ -4,7 +4,7 @@ class ClinicasController < ApplicationController
   # GET /clinicas
   # GET /clinicas.json
   def index
-    @clinicas = Clinica.all
+    @clinicas = Clinica.paginate(:page => params[:page], :per_page => 20)
   end
 
   # GET /clinicas/1
