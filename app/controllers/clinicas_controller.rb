@@ -1,20 +1,39 @@
 class ClinicasController < ApplicationController
   before_action :set_clinica, only: [:show, :edit, :update, :destroy]
-
+  skip_before_filter :verify_authenticity_token, :only => [:id_of_city]
   # GET /clinicas
   # GET /clinicas.json
   def index
-    @clinicas = Clinica.all
+    @search = Clinic.search(params[:q])
+    @clinics = @search.result.paginate(:page => params[:page]).per_page(20)
   end
 
   # GET /clinicas/1
   # GET /clinicas/1.json
   def show
+    @clinic = Clinic.find(params[:id])
   end
 
   # GET /clinicas/new
   def new
     @clinica = Clinica.new
+  end
+
+  def update
+    @clinic = current_user.clinic
+    if @clinic.update_attributes(clinic_params)
+      redirect_to :users, notice: 'Dados atualizados com sucesso.'
+    else
+      render :users_clinic_edit
+    end
+  end
+
+  def id_of_city
+    state = State.find_by_uf(params[:uf])
+
+    if request.xhr?
+      render :json => {city_id: state.id}
+    end
   end
 
   # GET /clinicas/1/edit
@@ -38,19 +57,6 @@ class ClinicasController < ApplicationController
   end
 
   # PATCH/PUT /clinicas/1
-  # PATCH/PUT /clinicas/1.json
-  def update
-    respond_to do |format|
-      if @clinica.update(clinica_params)
-        format.html { redirect_to @clinica, notice: 'Clinica was successfully updated.' }
-        format.json { render :show, status: :ok, location: @clinica }
-      else
-        format.html { render :edit }
-        format.json { render json: @clinica.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
   # DELETE /clinicas/1
   # DELETE /clinicas/1.json
   def destroy
@@ -70,5 +76,9 @@ class ClinicasController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def clinica_params
       params.require(:clinica).permit(:nome, :endereco, :complemento, :municipio, :cep, :latitude, :longitude, :telefone1, :telefone2, :mail, :publico, :publico_especifico, :sexo_publico, :modalidade)
+    end
+
+    def state_params
+    params.require(:state).permit(:name, :uf)
     end
 end
